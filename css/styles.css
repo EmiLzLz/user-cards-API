@@ -1,0 +1,104 @@
+body{ font-family: Arial, Helvetica, sans-serif; background-color: rgb(41, 41, 41);}
+
+.about{ font-size: 14px; }
+
+.total{ font-size: 13px; }
+
+button{
+  padding: 5px 2px;
+  width: 35%;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  border:solid 1px rgb(0, 132, 255);
+  color: rgb(0, 132, 255);
+  font-weight: bold;
+}
+
+button:hover{ background-color: rgb(0, 132, 255); color: white;}
+
+.user-info p{ color: grey;}
+
+.user {
+  border: solid 1px rgb(216, 216, 216);
+  width: 600px;
+  height: 309px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.images {
+  height: 45%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.row .user .images{ background-image: url(../images/office.jpg);}
+
+.second{ background-image: url(../images/office2.jpg) !important;}
+
+.images img {
+  top: 90%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.user-info { height: 110px; }
+
+.images,
+.user-info { transition: filter 0.3s ease-in; }
+
+.user:hover .images,
+.user:hover .user-info { filter: blur(1px); }
+
+.info-hidden {
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  margin-left: -100%;
+  transition: margin-left 0.3s ease-in;
+  z-index: 10;
+}
+
+.aditional-info {
+  width: 50%;
+  padding: 7px;
+  color: black;
+  background-color: white;
+  box-shadow: 0px 0px 19px 9px black;
+}
+
+.user:hover .info-hidden { margin-left: 0%; }
+
+@media screen and (max-width: 1250px) {
+  .user { width: 700px; }
+}
+
+@media screen and (max-width: 730px) {
+  .aditional-info { width: 100%; box-shadow: none;}
+
+  .user:hover .images,
+  .user:hover .user-info { filter: blur(0px); }
+
+  .user-info{ height: 38%;}
+
+  .user{ height: 350px; width: 95%;}  
+}
+
+@media screen and (max-width: 365px) {
+  button{ width: 50%;}
+
+  .user{ height: 380px;}
+
+  .user-info{ height: auto;}
+
+  .followers{ flex-direction: column; align-items: center !important;}
+
+  .images img { width: 100px; height: 100px;}
+}
